@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "password": "Alicepassword"
+    },
+    {
+      "id": 2,
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "password": "securepassword"
+    },
+    {
+      "id": 3,
+      "name": "Ruth Delgado",
+      "email": "ruthdelgado@gmail.com",
+      "password": "ruthspassword"
+    },
+    {
+      "id": 4,
+      "name": "Roberto Veintemilla",
+      "email": "robertop@gmail.com",
+      "password": "kiki123"
+    }
+  ]
+}

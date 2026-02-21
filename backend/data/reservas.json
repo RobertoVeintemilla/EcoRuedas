@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "id_usuario": 3,
+    "id_vehiculo": 2,
+    "fecha_reserva": "2024-07-15",
+    "hora_reserva": "19:00",
+    "hora_devolucion": "21:00",
+    "estado": "terminado"
+  },
+  {
+    "id": 2,
+    "id_usuario": 2,
+    "id_vehiculo": 1,
+    "fecha_reserva": "2024-07-16",
+    "hora_reserva": "20:30",
+    "hora_devolucion": "22:30",
+    "estado": "en uso"
+  },
+  {
+    "id": 3,
+    "id_usuario": 1,
+    "id_vehiculo": 3,
+    "fecha_reserva": "2024-07-17",
+    "hora_reserva": "18:00",
+    "hora_devolucion": "20:00",
+    "estado": "cancelada"
+  }
+]

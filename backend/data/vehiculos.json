@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "tipo": "Bicicleta de montaña",
+    "marca": "Venzo",
+    "modelo": "Loki",
+    "año": 2020,
+    "color": "Rojo",
+    "precio_por_dia": 50,
+    "disponibilidad": true
+  },
+  {
+    "id": 2,
+    "marca": "Merida",
+    "tipo": "Bicicleta de carretera",
+    "modelo": "Crossway",
+    "año": 2019,
+    "color": "Azul",
+    "precio_por_dia": 45,
+    "disponibilidad": true
+  },
+  {
+    "id": 3,
+    "marca": "Zenith",
+    "tipo": "Bicicleta de carretera",
+    "modelo": "Alpes",
+    "año": 2018,
+    "color": "Negro",
+    "precio_por_dia": 40,
+    "disponibilidad": false
+  },
+  {
+    "id": 4,
+    "marca": "Gadnic",
+    "modelo": "Xtreme",
+    "tipo": "Monopatin",
+    "año": 2021,
+    "color": "Verde",
+    "precio_por_dia": 65,
+    "disponibilidad": true
+  },
+  {
+    "id": 6,
+    "tipo": "Bicicleta",
+    "marca": "Zenith",
+    "modelo": "Andes",
+    "año": 2018,
+    "color": "Negra y roja",
+    "precio_por_dia": 48,
+    "disponibilidad": true
+  }
+]
