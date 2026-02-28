@@ -6,7 +6,8 @@
     "fecha_reserva": "2024-07-15",
     "hora_reserva": "19:00",
     "hora_devolucion": "21:00",
-    "estado": "terminado"
+    "estado": "terminado",
+    "seguro": true
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "fecha_reserva": "2024-07-16",
     "hora_reserva": "20:30",
     "hora_devolucion": "22:30",
-    "estado": "en uso"
+    "estado": "en uso",
+    "seguro": false
   },
   {
     "id": 3,
@@ -24,6 +26,47 @@
     "fecha_reserva": "2024-07-17",
     "hora_reserva": "18:00",
     "hora_devolucion": "20:00",
-    "estado": "cancelada"
+    "estado": "cancelada",
+    "seguro": true
+  },
+  {
+    "id": 4,
+    "id_usuario": 4,
+    "id_vehiculo": 6,
+    "fecha_reserva": "2026-02-28",
+    "hora_reserva": "19:00",
+    "hora_devolucion": "21:00",
+    "estado": "en uso",
+    "seguro": true
+  },
+  {
+    "id": 5,
+    "id_usuario": 3,
+    "id_vehiculo": 4,
+    "fecha_reserva": "2026-02-28",
+    "hora_reserva": "19:00",
+    "hora_devolucion": "21:00",
+    "estado": "en uso",
+    "seguro": true
+  },
+  {
+    "id": 6,
+    "id_usuario": 3,
+    "id_vehiculo": 4,
+    "fecha_reserva": "2026-02-28",
+    "hora_reserva": "19:00",
+    "hora_devolucion": "21:00",
+    "estado": "en uso",
+    "seguro": true
+  },
+  {
+    "id": 7,
+    "id_usuario": 2,
+    "id_vehiculo": 6,
+    "fecha_reserva": "2026-02-28",
+    "hora_reserva": "19:00",
+    "hora_devolucion": "21:00",
+    "estado": "en uso",
+    "seguro": true
   }
 ]

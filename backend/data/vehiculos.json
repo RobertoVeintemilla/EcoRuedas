@@ -6,7 +6,7 @@
     "modelo": "Loki",
     "año": 2020,
     "color": "Rojo",
-    "precio_por_dia": 50,
+    "precio_por_hora": 50,
     "disponibilidad": true
   },
   {
@@ -16,7 +16,7 @@
     "modelo": "Crossway",
     "año": 2019,
     "color": "Azul",
-    "precio_por_dia": 45,
+    "precio_por_hora": 45,
     "disponibilidad": true
   },
   {
@@ -26,7 +26,7 @@
     "modelo": "Alpes",
     "año": 2018,
     "color": "Negro",
-    "precio_por_dia": 40,
+    "precio_por_hora": 40,
     "disponibilidad": false
   },
   {
@@ -36,8 +36,8 @@
     "tipo": "Monopatin",
     "año": 2021,
     "color": "Verde",
-    "precio_por_dia": 65,
-    "disponibilidad": true
+    "precio_por_hora": 65,
+    "disponibilidad": false
   },
   {
     "id": 6,
@@ -46,7 +46,7 @@
     "modelo": "Andes",
     "año": 2018,
     "color": "Negra y roja",
-    "precio_por_dia": 48,
-    "disponibilidad": true
+    "precio_por_hora": 48,
+    "disponibilidad": false
   }
 ]

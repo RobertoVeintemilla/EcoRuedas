@@ -23,6 +23,42 @@
       "name": "Roberto Veintemilla",
       "email": "robertop@gmail.com",
       "password": "kiki123"
+    },
+    {
+      "id": 5,
+      "name": "Josefina Insua",
+      "email": "finainsua@example.com",
+      "password": "Josefinapassword"
+    },
+    {
+      "id": 6,
+      "name": "Joe",
+      "email": "joe@example.com",
+      "password": "Joepassword"
+    },
+    {
+      "id": 7,
+      "name": "Ruth E Delgado",
+      "email": "RuthEDelgado@example.com",
+      "password": "Nahiara"
+    },
+    {
+      "id": 21,
+      "name": "Rogelio Rodriguez",
+      "email": "Rogelio@example.com",
+      "password": "kiki123456°"
+    },
+    {
+      "id": 22,
+      "name": "Corina Gonzalez",
+      "email": "CGonzalez@example.com",
+      "password": "$2b$10$YpvPGBr2MLxw426m32wmB.yheh7lSlpJCJS9Rb4llshp7ObWP2dka"
+    },
+    {
+      "id": 23,
+      "name": "Roberto Veintemilla",
+      "email": "robertoveintemilla@gmail.com",
+      "password": "$2b$10$b6QSxnQIA37/cfg1kGl/xO0MZ601ryZx68Gm8nHMnRHX9tgEqNf4O"
     }
   ]
 }
