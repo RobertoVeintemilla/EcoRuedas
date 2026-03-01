@@ -38,6 +38,11 @@ const createReserva = (req, res) => {
     const datosVehiculos = leerDatosVehiculos();
 
     const { id_usuario, id_vehiculo, hora_reserva, hora_devolucion, estado, seguro } = req.body;
+    const total_final = datosVehiculos.precio_por_hora
+    if (seguro) {
+        total_final = total_final * ((new Date(`1970-01-01T${hora_devolucion}:00Z`) - new Date(`1970-01-01T${hora_reserva}:00Z`)) / (1000 * 60 * 60)) + 20; // Ejemplo de cálculo con seguro
+        return total_final ? res.json({ mensaje: "Reserva creada con seguro", total: total_final }) : res.status(400).json({ error: "Error al calcular el total con seguro" });
+    }
     const newReserva = {
         id: datos.length + 1,
         id_usuario,
@@ -45,6 +50,7 @@ const createReserva = (req, res) => {
         fecha_reserva: new Date().toISOString().slice(0, 10),
         hora_reserva,
         hora_devolucion,
+        total_final: total_final || 0,
         estado,
         seguro
     };
@@ -74,6 +80,7 @@ const createReserva = (req, res) => {
             fecha_reserva: newReserva.fecha_reserva,
             hora_reserva: newReserva.hora_reserva,
             estado: newReserva.estado,
+            total_final: newReserva.total_final,
             seguro: newReserva.seguro
         }
     })
@@ -84,6 +91,10 @@ const updateReserva = (req, res) => {
     const id = parseInt(req.params.id);
     const { id_usuario, id_vehiculo, hora_reserva, hora_devolucion, estado, seguro} = req.body;
     const indice = datos.findIndex(u => u.id === id);
+    if (seguro) {
+        const total_final = datosVehiculos.precio_por_hora * ((new Date(`1970-01-01T${hora_devolucion}:00Z`) - new Date(`1970-01-01T${hora_reserva}:00Z`)) / (1000 * 60 * 60)) + 20; // Ejemplo de cálculo con seguro
+        res.json({ mensaje: "Reserva creada con seguro", total: total_final })
+    }
 
     if (indice === -1) {
         return res.status(401).json({ error : "Reserva no encontrada"})
@@ -96,10 +107,25 @@ const updateReserva = (req, res) => {
         hora_reserva: hora_reserva || datos[indice].hora_reserva,
         hora_devolucion: hora_devolucion || datos[indice].hora_devolucion,
         estado: estado || datos[indice].estado,
+        total_final: total_final || datos[indice].total_final,
         seguro: seguro || datos[indice].seguro
     }
     escribirDatos(datos);
     res.json({ mensaje: "Reserva actualizada", reserva: datos[indice]})
+
+    if (estado === "cancelado" || estado === "terminado") {
+        const vehiculoIndex = datosVehiculos.findIndex(v => v.id === id_vehiculo);
+        if (vehiculoIndex !== -1) {
+            datosVehiculos[vehiculoIndex].disponibilidad = true;
+            escribirDatosVehiculos(datosVehiculos);
+        }
+    } else {
+        const vehiculoIndex = datosVehiculos.findIndex(v => v.id === id_vehiculo);
+        if (vehiculoIndex !== -1) {
+            datosVehiculos[vehiculoIndex].disponibilidad = false;
+            escribirDatosVehiculos(datosVehiculos);
+        }
+    }
 }
 
 const deleteReserva = (req, res) => {
